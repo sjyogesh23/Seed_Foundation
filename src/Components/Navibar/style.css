@@ -1,0 +1,14 @@
+.logo_div img{
+    width: 65px;
+    height: 58px;
+}
+.logo_div{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+.pec{
+    font-size: 18px;
+}

@@ -1,0 +1,82 @@
+.AboutUs_Page{
+    margin-top: 20px;
+    text-align: center;
+}
+.underLine{
+    height: 2px;
+    width: 80px;
+    background-color: #1D617A;
+    margin: auto;
+    margin-bottom: 30px;
+    transition: width 1s ease;
+}
+
+
+.onlyWhoWeAre{
+    margin: 50px auto;
+}
+.whoWeAre_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.whoWeAre_para{
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+
+.card_front, .card_back{
+    height: 100px;
+    width: 100%;
+    margin: 0px auto;
+    background-color: #1D617A;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+}
+.card_back{
+    font-size: 15px;
+    padding: 50px;
+}
+.icon_gap{
+    margin-left: 10px;
+}
+.mission_card{
+    background-color: #0E4D6C;
+    cursor: pointer;
+}
+.vision_card{
+    background-color: #F7771E;
+    cursor: pointer;
+}
+
+
+
+
+
+
+.member_div{
+    display: flex;
+    justify-content: center;
+}
+.member_col{
+    display: flex;
+    justify-content: center;
+}
+.member_card{
+    min-width: 250px;
+    max-width: 260px;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+.member_card:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+}
+.member_card_img{
+    max-height: 200px;
+}

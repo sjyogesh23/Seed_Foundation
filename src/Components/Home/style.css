@@ -1,0 +1,23 @@
+.quote_div{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    letter-spacing: .01spx;
+    background-image: url(quoteimg.png);
+    background-size: contain;
+    background-position-x: center;
+    background-repeat: no-repeat;    
+}
+.quote_div div{
+    max-width: 500px;
+    margin: 100px auto;
+}
+
+.author_name{
+    font-weight: 400;
+    font-size: 19px;
+}
