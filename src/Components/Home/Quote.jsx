@@ -4,7 +4,7 @@ export const Quote = () => {
     return (
         <div className='d-flex quote_div'>
             <div>
-                <h2>“{quote}”</h2>
+                <h2>"{quote}"</h2>
                 <span className="author_name">- {author}</span>
             </div>            
         </div>

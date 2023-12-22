@@ -62,12 +62,15 @@
 
 .member_div{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 .member_col{
     display: flex;
+    align-items: stretch;
     justify-content: center;
 }
+
 .member_card{
     min-width: 250px;
     max-width: 260px;

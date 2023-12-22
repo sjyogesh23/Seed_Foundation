@@ -1,0 +1,56 @@
+.video{
+    margin: 20px 0px;
+}
+.e_intern_des_title{
+    margin: 25px 0px;
+}
+.e_intern_des{
+    max-width: 100%;
+}
+
+
+.internship_card{
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+.internship_card:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+}
+
+  
+
+.related_internship_div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.e_scroll_btn{
+    background-color: #1D617A;
+    padding: 10px;
+    margin-right: 10px;
+    border-color: transparent;
+}
+.e_scroll_btn:active{
+    background-color: #cccbcb;
+}
+.box{
+    height: 200px;
+    min-width: 500px;
+    background-color: black;
+    margin: 10px;
+}
+.scroll_div{
+    display: flex;
+    gap: 1rem;
+    overflow: scroll;
+}
+
+.e_internship_body{
+    text-overflow: "ellipsis";
+    overflow: "hidden";
+    white-space: "nowrap";
+}
+
+.search_bar_div:focus{
+    border-color: black;
+}

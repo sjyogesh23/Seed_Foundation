@@ -1,6 +1,13 @@
+*{
+    font-family: 'Inter', sans-serif;
+}
 .App{
     font-family: 'Inter', sans-serif;
 }
 .logo_color{
     color: #1D617A;
+}
+.InitailFont{
+    font-family: 'Inter', sans-serif;
+
 }

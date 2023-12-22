@@ -18,7 +18,8 @@
     width: 350px;
     color: rgb(219, 218, 218);
 }
-.footer-icons i {
+.footer-icons a {
+    text-decoration: none;
     padding: 10px;
     background: #e1e1e1;
     color: #1A859B;
@@ -26,7 +27,7 @@
     border-radius: 50%;
     transition: 0.2s ease-in-out;
 }  
-.footer-icons i:hover {
+.footer-icons a:hover {
     background: #1A859B;
     color: #fff;
     cursor: pointer;

@@ -1,8 +1,10 @@
 import ReactCardFlip from 'react-card-flip';
 import { useState } from 'react'
 
-export const Mission_card = () => {
+export const Mission_card = (props) => {
     const [IsFlipped,setIsFlipped] = useState(false);
+
+    
 
     function flipCard(){
         setIsFlipped(!IsFlipped);
@@ -19,7 +21,7 @@ export const Mission_card = () => {
                 </div>
 
                 <div className='card_back mission_card' onClick={flipCard}>
-                    Technological & Leadership Empowerment of the Students of PTU through Innovation and Applied Engineering.
+                    {props.content}
                 </div>
             </ReactCardFlip>
         </div>

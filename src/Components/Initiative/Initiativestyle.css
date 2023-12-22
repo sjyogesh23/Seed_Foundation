@@ -1,0 +1,68 @@
+
+
+.E_ini{  
+  font-family: 'Inter', sans-serif;
+  margin: 15px 0px;
+}
+
+.main-heading {
+  margin-left: 15px;
+  text-transform: capitalize;
+  font-size: 35px;
+}
+.wrapper {
+  margin: 0px auto;
+  width: 90%;
+  margin-top: 70px;
+  
+}
+
+.sub-in {
+  max-width: 520px;
+  max-height: 38vh;
+  float: left;
+  border-radius: 5px;
+  margin: auto 40px auto 0px;
+}
+
+
+.thumbnail{
+  width: 100%;
+  height: 62vh;
+  object-fit: cover;
+}
+
+
+@media only screen and (max-width: 575px) {
+  .sub-in,.sub-in-right{
+    max-width: 100%;
+   margin: 0px auto 20px auto;
+  }
+  .thumbnail{
+    height: 40vh;
+  }
+  .main-heading{
+    font-size: 25px;
+  }
+  .textBox h3{
+    font-size: 10px;
+  }
+}
+  
+
+.sub-in-right {
+  float: right;
+  margin-left: 40px;
+
+}
+
+.testBox h3 {
+  font-size: 33px;
+}
+
+p{
+  font-size: 18px;
+  text-align: justify;
+}
+
+

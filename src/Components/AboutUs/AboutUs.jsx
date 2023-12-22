@@ -8,7 +8,7 @@ import Aos from 'aos';
 
 
 export const AboutUs = () => {
-
+  
   useEffect(()=>{
     Aos.init();
   }, [])
@@ -19,7 +19,7 @@ export const AboutUs = () => {
         <h2 className='logo_color aboutus_title' data-aos="fade-up" data-aos-duration="550">About Us</h2>
         <div className='underLine' data-aos="fade-up" data-aos-duration="600"></div>
       </div>      
-      <WhoWeAre/>
+      <WhoWeAre />
       <Members/>
     </Container>
   );
