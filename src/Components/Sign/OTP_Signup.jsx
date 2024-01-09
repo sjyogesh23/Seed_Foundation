@@ -6,7 +6,7 @@ import Alert from "@mui/material/Alert";
 import Snackbar from "@mui/material/Snackbar";
 import Stack from "@mui/material/Stack";
 import CssBaseline from "@mui/material/CssBaseline";
-import Container  from "@mui/material/Container";
+import Container from "@mui/material/Container";
 import axios from "axios";
 import BASE_URL from "../../global_vars";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -16,7 +16,6 @@ export const OTP_Signup = (props) => {
     parseInt(localStorage.getItem("otpResendTimestamp"), 10) || 0;
   const { state } = useLocation();
   const navigate = useNavigate();
-
 
   const [resendDisabled, setResendDisabled] = useState(false);
   const [countdown, setCountdown] = useState(calculateCountdown());
@@ -82,27 +81,26 @@ export const OTP_Signup = (props) => {
   }, [resendDisabled]);
 
   const handleResendClick = () => {
-    axios.post(
-      `${BASE_URL}/${state.endpoint}/resend-code`, {email: state.data.email}
-    ).then((response) => {
-      setSnackbar((prev) => ({
-        ...prev,
-        open: true,
-        message: response.data.message,
-        severity: "success",
-      }));
-    }
-
-    ).catch((error) => {
-      setSnackbar((prev) => ({
-        ...prev,
-        open: true,
-        message: error.response.data.message,
-        severity: "error",
-      }));
-    }
-
-    )
+    axios
+      .post(`${BASE_URL}/${state.endpoint}/resend-code`, {
+        email: state.data.email,
+      })
+      .then((response) => {
+        setSnackbar((prev) => ({
+          ...prev,
+          open: true,
+          message: response.data.message,
+          severity: "success",
+        }));
+      })
+      .catch((error) => {
+        setSnackbar((prev) => ({
+          ...prev,
+          open: true,
+          message: error.response.data.message,
+          severity: "error",
+        }));
+      });
     const timestamp = Date.now();
     localStorage.setItem("otpResendTimestamp", timestamp);
     setCountdown(30);
@@ -149,7 +147,9 @@ export const OTP_Signup = (props) => {
             type="submit"
             fullWidth
             variant="contained"
-            sx={{ mt: 3, mb: 2 ,
+            sx={{
+              mt: 3,
+              mb: 2,
               width: "100%",
               color: "white",
               backgroundColor: "#1D617A",
@@ -164,12 +164,14 @@ export const OTP_Signup = (props) => {
             fullWidth
             variant="contained"
             color="secondary"
-            sx={{ mt: 1, mb: 2 ,
+            sx={{
+              mt: 1,
+              mb: 2,
               width: "100%",
               color: "#1D617A",
               backgroundColor: "#fff",
               ":hover": { backgroundColor: "#fff", color: "#1D617A" },
-              border: '1px solid #1D617A',
+              border: "1px solid #1D617A",
               textTransform: "none",
             }}
             onClick={handleResendClick}

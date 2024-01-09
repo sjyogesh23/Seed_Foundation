@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import './signin_style.css'
+import "./signin_style.css";
 import {
   TextField,
   Button,
@@ -50,7 +50,7 @@ export const SignIn = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("signin")
+    console.log("signin");
     const data = new FormData(event.target);
 
     // fetching values from input fields
@@ -61,15 +61,12 @@ export const SignIn = (props) => {
     // If you plan to make HTTP requests using Axios, you can include that code here.
     const endpoint = selectedValue === "Student" ? "student" : "member";
     axios
-      .post(
-        `${BASE_URL}/signin/${endpoint}`,
-        {
-          email: email,
-          password: password,
-        }
-      )
+      .post(`${BASE_URL}/signin/${endpoint}`, {
+        email: email,
+        password: password,
+      })
       .then((response) => {
-        console.log(response)
+        console.log(response);
 
         setSnackbar((prev) => ({
           ...prev,
@@ -83,16 +80,14 @@ export const SignIn = (props) => {
         const userRole = data.role;
         const tokens = data.tokens;
 
-        
         //Pass user data to the parent component
         props.setUserData(data);
 
         // Save user data to local storage
-        localStorage.setItem('userData', JSON.stringify(data));
+        localStorage.setItem("userData", JSON.stringify(data));
 
         // Automatically navigate to the /Profile page
-        navigate('/Profile', {replace: true});
-
+        navigate("/Profile", { replace: true });
       })
       .catch((err) => {
         switch (err?.response?.status) {
@@ -238,7 +233,8 @@ export const SignIn = (props) => {
                       textTransform: "none",
                     }}
                     disabled={!formValid}
-                    as={Link} to="/Profile"
+                    as={Link}
+                    to="/Profile"
                   >
                     Sign In
                   </Button>
