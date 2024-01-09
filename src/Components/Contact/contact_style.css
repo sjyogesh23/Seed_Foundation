@@ -1,0 +1,19 @@
+  .contactus_title{
+    text-align: center;
+  }
+  .contact_form {
+    width: 100%;
+  }
+  .contact_submitBtn,
+.contact_resetBtn {
+  flex: 1; 
+  margin-bottom: 8px;
+}
+.all_contact_us{
+    margin: 40px 0px;
+}
+
+.cont_ips{
+    margin: auto;
+    max-width: 800px;
+}

@@ -1,0 +1,58 @@
+ .not-found_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+    background-color: rgb(255, 255, 255); 
+  }
+   
+  .not-found_content {
+    text-align: center;
+    color: #1D617A;
+  }
+  
+  .funny-svg {
+    width: 200px; 
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .bounce {
+    font-size: 4em;
+    margin: 0;
+    animation: bounce 1s infinite;
+  }
+  
+  p {
+    font-size: 0.8em;
+  }
+  
+
+  button.ErrorBtn{
+    background-color: #1D617A;
+    /* padding: 12px 18px 12px 18px;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer; */
+    border: #1D617A;
+  }
+  button.ErrorBtn:hover{
+    background-color: #174e63;
+  }
+
+  .ErrorImage{
+    max-width: 50%;
+    margin: auto;
+    user-select: none;
+  }
+
+  .ErrorLink{
+    font-size: x-small;
+    text-align: right;
+    opacity:0.1;
+  }
+  .ErrorLink a{
+    cursor: default;
+    user-select: none;
+  }
+  

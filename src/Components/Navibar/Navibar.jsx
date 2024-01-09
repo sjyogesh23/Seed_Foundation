@@ -1,10 +1,17 @@
 import seedlogo from './logo.png';
-import './style.css';
-import {Container, Navbar, Nav, NavDropdown, Button} from 'react-bootstrap';
+import './navibar_style.css';
+import {Container, Navbar, Nav, Button} from 'react-bootstrap';
 
-export const Navibar = () => {
+export const Navibar = (props) => {
+    const userAuth= props.useAuth;
+    let button_Name= 'Sign In';
+    let button_Path= '/SignIn';
+    if (userAuth){
+        button_Name='Profile';
+        button_Path='/Profile';
+    }
     return(
-        <div>
+        <div className="total_navibar">
             <Navbar expand="lg" className="bg-body-primary">
                 <Container>
                     <Navbar.Brand href="/">
@@ -19,20 +26,14 @@ export const Navibar = () => {
                     <Navbar.Collapse id="basic-navbar">
                         <Nav className="mx-auto">
                             <Nav.Link href="/">Home</Nav.Link>
-
-                            <Nav.Link href="/AboutUs">About us</Nav.Link>
-
-                            <Nav.Link href="/Initiative">Initiative</Nav.Link>
-
-                            <NavDropdown title="Training" id="basic-nav-dropdown">
-                                <NavDropdown.Item href="/Training/Videos">Videos</NavDropdown.Item>
-                                <NavDropdown.Item href="/Training/Articals">Articals</NavDropdown.Item>
-                                <NavDropdown.Item href="/Training/Podcast">Podcast</NavDropdown.Item>
-                                <NavDropdown.Item href="/Training/Internship">Internship</NavDropdown.Item>
-                            </NavDropdown>
+                            <Nav.Link href="/AboutUs">About us</Nav.Link>                            
+                            <Nav.Link href="/Activity">Activities</Nav.Link>                            
+                            <Nav.Link href="/Team">Team</Nav.Link>
+                            <Nav.Link href="/Initiative">Initiative</Nav.Link>                            
+                            <Nav.Link href="/Contact">Contact Us</Nav.Link>
                         </Nav>
                         
-                        <Button className='bg-body-primary' href="/SignIn">Sign in</Button>
+                        <Button href={button_Path} style={{ width:'100px'}}>{button_Name}</Button>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>            

@@ -1,4 +1,7 @@
-
+.Initiative_Title{
+  margin: 20px;
+    text-align: center;
+}
 
 .E_ini{  
   font-family: 'Inter', sans-serif;
@@ -60,9 +63,81 @@
   font-size: 33px;
 }
 
-p{
-  font-size: 18px;
-  text-align: justify;
+
+
+
+
+.init_over{
+  width: 100%;
+  padding: 20px;
+  overflow: hidden;
 }
+.init_over_title{
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+.init_over_container{
+  min-height: 200px;
+}
+.init_loi{
+  width: 100%;
+  padding: 20px;
+}
+.init_loi_Hed{
+  font-size: 16px;
+  font-weight: 500;
+}
+.init_loi_subHed{
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #1D617A;
+}
+.marquee_contanier{
+  max-height: 210px;
+  overflow: auto;
+}
+
+
+
+.category-container {
+  margin-bottom: 40px;
+}
+
+.lecture-container {
+  margin-top: 10px;
+}
+
+.Init_tra_image-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  overflow: scroll;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+.Init_tra_image-container img {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 575px) {
+  .Init_tra_image-container img {
+    width: 100px;
+    height: 150px;
+  }
+}
+
+
+
 
 

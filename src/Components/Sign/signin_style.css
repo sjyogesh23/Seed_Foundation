@@ -1,0 +1,14 @@
+.signup-wrapper-in {
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+  margin:auto;
+  margin-top: 15px;
+}
+
+
+.submitBtn,
+.resetBtn {
+  flex: 1; 
+  margin-bottom: 8px;
+}

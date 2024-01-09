@@ -1,0 +1,62 @@
+.AboutUs_Page{
+    margin: 20px;
+    text-align: center;
+}
+.about_underLine{
+    height: 2px;
+    width: 80px;
+    background-color: #1D617A;
+    margin: 0px auto;
+    transition: width 1s ease;
+}
+.about_skeleton-line {
+    height: 14px;
+    width: 100%;
+    background-color: #dddddd; 
+    margin-bottom: 10px;
+  }
+  .animate-skeleton-in {
+    animation: fadeIn .6s ease;
+  }
+  
+  @keyframes fadeIn {
+    50% {
+      background-color: #dddddd50; 
+    }
+    0%, 100% {
+      background-color: #a5a5a550; 
+    }
+  }
+  
+
+.about_whoWeAre{
+    margin: 100px auto;
+}
+.about_whoWeAre_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.about_whoWeAre_para{
+    max-width: 750px;
+    margin: auto;
+}
+
+
+
+.about_mission_vision{
+    margin-bottom: 100px;
+} 
+.about_learn_title{
+    font-weight: 450;
+}
+.about_learn_body{
+    background-color: #fafafa;
+    border-top: 1px solid rgba(189, 189, 189, 0.527);
+}
+
+
+
+
+
+

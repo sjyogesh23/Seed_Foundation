@@ -1,38 +1,59 @@
-import { Row, Col } from 'react-bootstrap'
-import { Mission_card } from './MissionVision/Mission_card';
-import { Vission_card } from './MissionVision/Vission_card';
+import { Row, Col } from 'react-bootstrap';
 import Aos from 'aos';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
-export const WhoWeAre = () => { 
-    
-    let mission_data = "Technological & Leadership Empowerment of the Students of PTU through Innovation and Applied Engineering.";
-    let vision_data= "Prepare the Students of PTU for a smooth transition to the Industry by helping them hone the required skills ahead of time.";
-    let whoWeAre_data ="we are the owners of this website haha 🙂🙂";
+export const WhoWeAre = (props) => {
+  let mission_data = props.mission;
+  let vision_data = props.vision;
+  let whoWeAre_data = props.whoweare;
 
-    useEffect(()=>{
-        Aos.init();
-    }, [])
+  const [loading, setLoading] = useState(true);
 
-    return (
-        <div className='whoWeAre_div'>
-            <div className='onlyWhoWeAre'>
-                <h3 className='whoWeAre_title logo_color' data-aos="fade-up" data-aos-duration="650">Who We Are</h3>
-                <p className='whoWeAre_para' data-aos="fade-up" data-aos-duration="750">
-                    {whoWeAre_data}
-                </p>
-            </div>
-            
+  useEffect(() => {
+    Aos.init();
+    const loadingTimeout = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
 
-            <Row>
-                <Col md={6} className='mb-4' data-aos="zoom-in" data-aos-duration="850">
-                    <Mission_card content={mission_data}/>
-                </Col>
+    return () => clearTimeout(loadingTimeout);
+  }, []);
 
-                <Col md={6} className='mb-4' data-aos="zoom-in" data-aos-duration="850">
-                    <Vission_card content={vision_data}/>
-                </Col>
-            </Row>
+  const SkeletonText = ({ lines }) => (
+    <div>
+      {[...Array(lines)].map((_, index) => (
+        <div key={index} className={`about_skeleton-line animate-skeleton-${loading ? 'in' : 'out'}`} />
+      ))}
+    </div>
+  );
+
+  return (
+    <div className='about_whoWeAre_div'>
+      <div className='about_whoWeAre'>
+        <h3 className='about_whoWeAre_title logo_color' data-aos="fade-up" data-aos-duration="650">
+          Who We Are
+        </h3>
+        <div className='about_whoWeAre_para' data-aos="fade-up" data-aos-duration="750">
+          {loading ? <SkeletonText lines={4} /> : whoWeAre_data}
         </div>
-    )
-}
+      </div>
+
+      <div className='about_mission_vision'>
+        <Row>
+          <Col md={6} className='mb-4' data-aos="fade-right" data-aos-duration="850">
+            <div>
+              <h2 className="logo_color">Our Mission</h2>
+              <div>{loading ? <SkeletonText lines={2} /> : mission_data}</div>
+            </div>
+          </Col>
+
+          <Col md={6} className='mb-4' data-aos="fade-left" data-aos-duration="850">
+            <div>
+              <h2 className="logo_color">Our Vision</h2>
+              <div>{loading ? <SkeletonText lines={2} /> : vision_data}</div>
+            </div>
+          </Col>
+        </Row>
+      </div>
+    </div>
+  );
+};

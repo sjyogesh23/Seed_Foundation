@@ -1,2 +1,2 @@
-const BASE_URL = "https://s01m8wo5t0.execute-api.us-west-1.amazonaws.com/deploy";
+const BASE_URL = "https://5dps193u4a.execute-api.us-east-1.amazonaws.com/api-v2";
 module.exports = BASE_URL;

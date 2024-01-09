@@ -1,0 +1,61 @@
+.activity_container {
+    margin-top: 20px;
+    min-height: 70vh;
+  }
+
+  .activity_heading {
+    text-align: center;
+  }
+  
+  .activity {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 50px auto;
+  }
+  
+  .activity_card {
+    box-sizing: border-box;
+    width: calc(25% - 20px); /* Adjusted width for desktop to accommodate margins */
+    margin: 0 10px 20px 10px; /* Added margin to all sides */
+    height: 300px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .activity_card:hover {
+    transform: scale(1.05);
+  }
+  
+  .activity_title {
+    margin: 0;
+    height: 60px;
+    background-color: #1D617A;
+    border-radius: 5px 5px 0px 0px;
+    color: white;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    border-bottom: 1px solid rgba(189, 189, 189, 0.527);
+  }
+  
+  .activity_list {
+    padding-left: 20px;
+  }
+  
+  .activity_list_item {
+    list-style-type: disc;
+  }
+  
+  /* Media queries for different screen sizes */
+  @media (max-width: 1199px) {
+    .activity_card {
+      width: calc(50% - 20px); /* 2 cards per row for tablet */
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .activity_card {
+      width: calc(100% - 20px); /* 1 card per row for mobile */
+    }
+  }
+  
